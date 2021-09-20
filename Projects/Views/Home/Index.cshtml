@@ -26,10 +26,10 @@
                 <div class="mb-2">
                     <label for="Name" class="form-label">Name</label>
                     <select class="form-control form-control" asp-for="Name" id="Name" placeholder="Name">
-                        @*@foreach (var people in Model.Name)
+                        @foreach (var people in Model.Name)
                         {
                             <option>@people.Name</option>
-                        }*@
+                        }
                     </select>
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
