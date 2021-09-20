@@ -1,0 +1,47 @@
+﻿@model Projects.Models.People
+
+
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Expense</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <label for="Category" class="form-label">Category</label>
+                    <select class="form-control form-control" asp-for="Category" id="Category" placeholder="Category">
+                        <option>Large select</option>
+                    </select>
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="mb-2">
+                    <label for="Region" class="form-label">Region</label>
+                    <select class="form-control form-control" asp-for="Region" id="Region" placeholder="Region">
+                        <option>Large select</option>
+                    </select>
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+                <div class="mb-2">
+                    <label for="Name" class="form-label">Name</label>
+                    <select class="form-control form-control" asp-for="Name" id="Name" placeholder="Name">
+                        @*@foreach (var people in Model.Name)
+                        {
+                            <option>@people.Name</option>
+                        }*@
+                    </select>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="w-25 btn-group" role="group" style="float: right">
+                    <a asp-controller="Expense" asp-action="Index" class="btn btn-outline-dark mx-1">
+                        Go Back
+                    </a>
+                    <input type="submit" class="btn btn-info" value="Create" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
