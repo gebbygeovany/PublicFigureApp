@@ -16,10 +16,11 @@ namespace Projects.Controllers
         {
             _db = db;
         }
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
-            IEnumerable<Article> objList = _db.Articles;
-            return View(objList);
+            //IEnumerable<Article> objList = _db.Articles;
+            var data = _db.Articles.Where(x => x.People.Id == id);
+            return View(data);
         }
 
         //GET-Create

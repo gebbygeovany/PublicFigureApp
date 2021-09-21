@@ -46,7 +46,7 @@
                     <td width="30%">@people.Category</td>
                     <td width="30%">@people.Region</td>
                     <td width="5%">
-                        <a asp-controller="Article" asp-action="Index" class="btn btn-info">
+                        <a asp-controller="Article" asp-action="Index" asp-route-Id="@people.Id" class="btn btn-info">
                             View
                         </a>
                     </td>
