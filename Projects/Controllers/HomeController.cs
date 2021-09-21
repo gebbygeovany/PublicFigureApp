@@ -20,14 +20,18 @@ namespace Projects.Controllers
             _db = db;
         }
 
+        //GET-Index
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<People> objList = _db.Peoples;
+            return View(objList);
         }
-
-        public IActionResult Privacy()
+        //POST-Index
+        public IActionResult IndexPost()
         {
-            return View();
+            //IEnumerable<People> objList = _db.Peoples; 
+            var data = _db.Peoples.Where(x => x.Category == HttpContext.Request.Form["category"].ToString() && x.Region == HttpContext.Request.Form["region"].ToString());
+            return View(data);
         }
 
         //GET-Create
@@ -45,7 +49,22 @@ namespace Projects.Controllers
             {
                 _db.Peoples.Add(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Create");
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        //GET-Details
+        public IActionResult Details(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Peoples.Find(id);
+            if (id == null)
+            {
+                return NotFound();
             }
             return View(obj);
         }
