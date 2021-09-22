@@ -2,31 +2,37 @@
 
 <form method="post" asp-action="Create">
     <div class="border p-3">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group row">
             <h2 class="text-black-50 pl-3">Add Public Figure</h2>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="mb-2">
-                    <label for="title" class="form-label">Name</label>
-                    <input type="text" asp-for="title" class="form-control" id="title" placeholder="title">
+                    <input type="text" asp-for="@Model.PeopleId" disabled class="form-control" id="id" placeholder="ID">
                 </div>
                 <div class="mb-2">
-                    <label for="link" class="form-label">link</label>
-                    <input type="text" asp-for="link" class="form-control" id="link" placeholder="link">
+                    <label for="title" class="form-label">title</label>
+                    <input type="text" asp-for="Title" class="form-control" id="title" placeholder="title">
+                </div> <div class="mb-2">
+                    <label for="link" class="form-label">Name</label>
+                    <input type="text" asp-for="Link" class="form-control" id="link" placeholder="link">
                 </div>
-                
+
                 <div class="w-25 btn-group " role="group" style="float: right">
                     <a asp-controller="Article" asp-action="Index" class="btn btn-outline-dark mx-1">
                         Go Back
                     </a>
-                    <input type="submit" class="btn btn-info" value="Create" />
+                    <input type="submit" class="btn btn-info " value="Create" />
                 </div>
 
             </div>
         </div>
     </div>
 </form>
+
+<script type="text/javascript">
+    document.getElementById("id").setAttribute('value', 2);
+</script>
+
 
 

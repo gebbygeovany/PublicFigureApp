@@ -10,8 +10,8 @@ using Projects.Data;
 namespace Projects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210921061013_addFK")]
-    partial class addFK
+    [Migration("20210922071007_changeFieldName")]
+    partial class changeFieldName
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,23 +23,23 @@ namespace Projects.Migrations
 
             modelBuilder.Entity("Projects.Models.Article", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ArticleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("PeopleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("link")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
+                    b.HasKey("ArticleId");
 
                     b.HasIndex("PeopleId");
 

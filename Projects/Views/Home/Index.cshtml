@@ -42,11 +42,12 @@
             @foreach (var people in Model)
             {
                 <tr>
-                    <td width="35%" id="name">@people.Name</td>
+                    <td width="30%" id="name">@people.Name</td>
                     <td width="30%">@people.Category</td>
                     <td width="30%">@people.Region</td>
-                    <td width="5%">
+                    <td width="10%">
                         <a asp-controller="Article" asp-action="Index" asp-route-Id="@people.Id" class="btn btn-info">
+                            <i class="bi bi-eye"></i>
                             View
                         </a>
                     </td>

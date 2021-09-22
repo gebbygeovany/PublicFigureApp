@@ -8,17 +8,16 @@
                 <tr>
                     <th>Title</th>
                     <th>Link</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var article in Model)
                 {
                     <tr>
-                        <td width="50%">@article.title</td>
+                        <td width="50%">@article.Title</td>
                         <td width="50%">
                             <a href="https://www.youtube.com/watch?v=xsReeg7WqRc">
-                                @article.link
+                                @article.Link
                             </a>
                         </td>
                     </tr>
@@ -27,7 +26,7 @@
             </tbody>
         </table>
         <div class="col-12 text-right">
-            <a asp-controller="Article" asp-action="Create" class="btn btn-outline-info">
+            <a asp-controller="Article" asp-action="Create" asp-route-Id="2" class="btn btn-outline-info">
                 <i class="bi bi-plus-lg"></i>
                 Add New Article
             </a>
@@ -37,7 +36,7 @@
     {
         <div class="text-center">
             <p>No Articles Yet</p>
-            <a asp-controller="Article" asp-action="Create" class="btn btn-outline-info">
+            <a asp-controller="Article" asp-action="Create" asp-route-Id="2" class="btn btn-outline-info">
                 <i class="bi bi-plus-lg"></i>
                 Add New Article
             </a>

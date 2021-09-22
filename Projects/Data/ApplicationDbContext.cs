@@ -15,8 +15,6 @@ namespace Projects.Data
         }
 
         public DbSet<People> Peoples { get; set; }
-        public object People { get; internal set; } 
         public DbSet<Article> Articles { get; set; }
-        public object Article { get; internal set; }
     }
 }
