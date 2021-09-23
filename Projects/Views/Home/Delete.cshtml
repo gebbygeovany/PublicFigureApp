@@ -1,0 +1,42 @@
+﻿@model Projects.Models.People
+
+<form method="post" asp-action="DeletePost">
+    <input asp-for="Id" hidden></>
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Delete Public Figure</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <label for="Name" class="form-label">Name</label>
+                    <input readonly type="text" asp-for="Name" class="form-control" id="Name" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-2">
+                    <label for="Category" class="form-label">Category</label>
+                    <input readonly type="text" asp-for="Category" class="form-control" id="Category" placeholder="Category">
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Region" class="form-label">Region</label>
+                    <input readonly type="text" asp-for="Region" class="form-control" id="Region" placeholder="Region">
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+               
+                <div class="w-25 btn-group " role="group" style="float: right">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-dark mx-1">
+                        Go Back
+                    </a>
+                    <input type="submit" class="btn btn-danger " value="Delete" icon="bi bi-trash" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+

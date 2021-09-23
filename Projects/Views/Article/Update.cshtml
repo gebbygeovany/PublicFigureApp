@@ -3,10 +3,10 @@
 @{
     var peopleId = ViewData["PeopleId"];
 }
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Update">
     <div class="border p-3">
         <div class="form-group row">
-            <h2 class="text-black-50 pl-3">Add Article</h2>
+            <h2 class="text-black-50 pl-3">Update Article</h2>
         </div>
         <div class="row">
             <div class="col-12">
@@ -20,12 +20,14 @@
                     <label for="link" class="form-label">Link</label>
                     <input type="text" asp-for="Link" class="form-control" id="link" placeholder="Input link">
                 </div>
+
                 <div class="w-25 btn-group " role="group" style="float: right">
                     <a asp-controller="Article" asp-action="Index" asp-route-id=@peopleId class="btn btn-outline-dark mx-1">
                         Go Back
                     </a>
-                    <input type="submit" class="btn btn-info " value="Create" />
+                    <input type="submit" class="btn btn-info " value="Update" />
                 </div>
+
             </div>
         </div>
     </div>

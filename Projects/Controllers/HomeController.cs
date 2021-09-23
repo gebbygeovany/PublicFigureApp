@@ -53,9 +53,8 @@ namespace Projects.Controllers
             }
             return View(obj);
         }
-
-        //GET-Details
-        public IActionResult Details(int? id)
+        //GET-Delete
+        public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
             {
@@ -65,6 +64,52 @@ namespace Projects.Controllers
             if (id == null)
             {
                 return NotFound();
+            }
+            return View(obj);
+        }
+
+        // POST-Delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.Peoples.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _db.Peoples.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+        //GET-Update
+        public IActionResult Update(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Peoples.Find(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+        // POST-Update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(People obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Peoples.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(obj);
         }

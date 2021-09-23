@@ -3,7 +3,8 @@
 @{
     var peopleId = ViewData["PeopleId"];
 }
-<form method="post" asp-action="Create">
+<form method="post" asp-action="DeletePost">
+    <input asp-for="ArticleId" hidden></>
     <div class="border p-3">
         <div class="form-group row">
             <h2 class="text-black-50 pl-3">Add Article</h2>
@@ -15,19 +16,18 @@
                 </div>
                 <div class="mb-2">
                     <label for="title" class="form-label">Title</label>
-                    <input type="text" asp-for="Title" class="form-control" id="title" placeholder="Input title">
+                    <input readonly type="text" asp-for="Title" class="form-control" id="title" placeholder="Input title">
                 </div> <div class="mb-3">
                     <label for="link" class="form-label">Link</label>
-                    <input type="text" asp-for="Link" class="form-control" id="link" placeholder="Input link">
+                    <input readonly type="text" asp-for="Link" class="form-control" id="link" placeholder="Input link">
                 </div>
                 <div class="w-25 btn-group " role="group" style="float: right">
                     <a asp-controller="Article" asp-action="Index" asp-route-id=@peopleId class="btn btn-outline-dark mx-1">
                         Go Back
                     </a>
-                    <input type="submit" class="btn btn-info " value="Create" />
+                    <input type="submit" class="btn btn-danger " value="Delete" />
                 </div>
             </div>
         </div>
     </div>
 </form>
-

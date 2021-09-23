@@ -2,7 +2,7 @@
 
 namespace Projects.Migrations
 {
-    public partial class changeFieldName : Migration
+    public partial class changePKName3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
