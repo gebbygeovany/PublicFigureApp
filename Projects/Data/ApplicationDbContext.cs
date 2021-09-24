@@ -16,5 +16,6 @@ namespace Projects.Data
 
         public DbSet<People> Peoples { get; set; }
         public DbSet<Article> Articles { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }

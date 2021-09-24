@@ -459,3 +459,4 @@ C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Vie
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Create.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Delete.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Update.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs

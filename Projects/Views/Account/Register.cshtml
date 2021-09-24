@@ -1,0 +1,28 @@
+﻿@model Projects.Models.Account
+
+<form method="post" asp-action="Register">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Article</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" asp-for="Name" class="form-control" id="Name" placeholder="Input Name">
+                </div> 
+                <div class="mb-2">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" asp-for="Email" class="form-control" id="Email" placeholder="Input Email">
+                </div>
+                <div class="mb-3">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" asp-for="Password" class="form-control" id="Password" placeholder="Input Password">
+                </div>
+                <div class="w-25 btn-group " role="group" style="float: right">
+                    <input type="submit" class="btn btn-info " value="Save" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

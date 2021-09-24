@@ -9,8 +9,8 @@ using Projects.Data;
 namespace Projects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210924014552_newDB")]
-    partial class newDB
+    [Migration("20210924071020_addDb")]
+    partial class addDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,28 @@ namespace Projects.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Projects.Models.Account", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Accounts");
+                });
 
             modelBuilder.Entity("Projects.Models.Article", b =>
                 {
