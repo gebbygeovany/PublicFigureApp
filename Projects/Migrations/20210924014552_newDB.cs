@@ -2,7 +2,7 @@
 
 namespace Projects.Migrations
 {
-    public partial class changeDB : Migration
+    public partial class newDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,15 +10,14 @@ namespace Projects.Migrations
                 name: "Articles",
                 columns: table => new
                 {
-                    ArticleId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Link = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PeopleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Articles", x => x.ArticleId);
+                    table.PrimaryKey("PK_Articles", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(

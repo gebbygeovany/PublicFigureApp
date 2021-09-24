@@ -7,7 +7,7 @@
 <div class="container p-3">
     @if (Model.Count() > 0)
     {
-        <table class="table table-striped table-hover" style="width:100%">
+        <table class="table table-hover" style="width:100%">
             <thead>
                 <tr>
                     <th>Titles</th>
@@ -18,18 +18,10 @@
                 @foreach (var article in Model)
                 {
                     <tr>
-                        <td width="75%">@article.Title</td>
-                        <td width="25%">
-                            <div class="btn-group text-right" role="group" aria-label="Basic example">
-                                <a asp-controller="Article" asp-action="Delete" asp-route-Id="@article.ArticleId"  class="btn btn-outline-danger">
-                                    <i class="bi bi-trash"></i>
-                                    Delete
-                                </a>
-                                <a asp-controller="Article" asp-action="Update"  asp-route-Id="@article.ArticleId" asp-route-People="@peopleId" class="btn btn-outline-dark">
-                                    <i class="bi bi-pencil-square"></i>
-                                    Edit
-                                </a>
-                                <a href="@article.Link" class="btn btn-outline-info">
+                        <td width="90%">@article.Title</td>
+                        <td width="10%">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="@article.Link" class="btn btn-info" >
                                     <i class="bi bi-eye"></i>
                                     View
                                 </a>
@@ -40,18 +32,12 @@
 
             </tbody>
         </table>
-        <div class="col-12 text-right">
-            <a asp-controller="Article" asp-action="Create" asp-route-Id="@peopleId" class="btn btn-info">
-                <i class="bi bi-plus-lg"></i>
-                Add New Article
-            </a>
-        </div>
     }
     else
     {
         <div class="text-center">
             <p>No Articles Yet</p>
-            <a asp-controller="Article" asp-action="Create" asp-route-Id="@peopleId" class="btn btn-outline-info">
+            <a asp-controller="ManageArticle" asp-action="Create" asp-route-Id="@peopleId" class="btn btn-outline-info">
                 <i class="bi bi-plus-lg"></i>
                 Add New Article
             </a>

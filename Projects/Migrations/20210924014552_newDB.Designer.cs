@@ -9,8 +9,8 @@ using Projects.Data;
 namespace Projects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210923075741_changePKName1")]
-    partial class changePKName1
+    [Migration("20210924014552_newDB")]
+    partial class newDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,10 +22,8 @@ namespace Projects.Migrations
 
             modelBuilder.Entity("Projects.Models.Article", b =>
                 {
-                    b.Property<int>("ArticleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("Link")
                         .IsRequired()
@@ -38,7 +36,7 @@ namespace Projects.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ArticleId");
+                    b.HasKey("Id");
 
                     b.ToTable("Articles");
                 });

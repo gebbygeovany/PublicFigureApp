@@ -9,8 +9,8 @@ namespace Projects.Models
 {
     public class Article
     {
-        [Key]
-        public int ArticleId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]

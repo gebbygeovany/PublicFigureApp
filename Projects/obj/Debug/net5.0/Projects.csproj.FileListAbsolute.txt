@@ -414,7 +414,6 @@ C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.TagHelpers.output.cache
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.RazorCoreGenerate.cache
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -428,8 +427,6 @@ C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\ref\Projects.dll
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.pdb
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.genruntimeconfig.cache
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
 C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll
@@ -451,9 +448,14 @@ C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\runtimes\
 C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\gebby.geovany\source\repos\Projects\Projects\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Article\Index.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Article\Create.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\Update.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Article\Delete.cshtml.g.cs
 C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Home\IndexPost.cshtml.g.cs
-C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\Article\Update.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Projects.csproj.AssemblyReference.cache
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManagePeople\Index.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManagePeople\Create.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManagePeople\Delete.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManagePeople\Update.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManagePeople\IndexPost.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Index.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Create.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Delete.cshtml.g.cs
+C:\Users\gebby.geovany\source\repos\Projects\Projects\obj\Debug\net5.0\Razor\Views\ManageArticle\Update.cshtml.g.cs

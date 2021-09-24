@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Projects.Models.People>
-@{ 
+@{
     var categoryData = ViewData["Category"];
     var regiondata = ViewData["Region"];
     People data = new People();
@@ -48,15 +48,22 @@
             <tbody>
                 @foreach (var people in peopleData)
                 {
-                   
                     <tr>
-                        <td width="30%" id="name">@people.Name</td>
-                        <td width="30%">@people.Category</td>
-                        <td width="30%">@people.Region</td>
-                        <td width="10%">
+                        <td width="25%" id="name">@people.Name</td>
+                        <td width="25%">@people.Category</td>
+                        <td width="25%">@people.Region</td>
+                        <td width="25%">
 
                             <div class="btn-group text-right" role="group" aria-label="Basic example">
-                                <a asp-controller="Article" asp-action="Index" asp-route-Id="@people.Id" class="btn btn-info">
+                                <a asp-controller="ManagePeople" asp-action="Delete" asp-route-Id="@people.Id" class="btn btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                    Delete
+                                </a>
+                                <a asp-controller="ManagePeople" asp-action="Update" asp-route-Id="@people.Id" class="btn btn-outline-dark">
+                                    <i class="bi bi-pencil-square"></i>
+                                    Edit
+                                </a>
+                                <a asp-controller="ManageArticle" asp-action="Index" asp-route-Id="@people.Id" class="btn btn-outline-info">
                                     <i class="bi bi-eye"></i>
                                     View
                                 </a>
@@ -67,18 +74,20 @@
 
             </tbody>
         </table>
-        
+        <div class="col-12 text-right">
+            <a asp-controller="ManagePeople" asp-action="Create" class="btn btn-outline-info">
+                <i class="bi bi-plus-lg"></i>
+                Add New People
+            </a>
+        </div>
     }
     else
     {
         <div class="text-center">
             <p>There is no people in this filter</p>
-            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-info">
+            <a asp-controller="ManagePeople" asp-action="Index" class="btn btn-outline-info">
                 Go Back
             </a>
-        <div>
-        </div>
-            
         </div>
     }
 
